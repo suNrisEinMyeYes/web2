@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model weblab2.Models.ResultModel
+<h1>@ViewBag.h1</h1>
+<form  asp-action="ModelBindSep" asp-controller="Form" method="post">
+    <div>
+        <div><field name="first" value="@Model.first" /></div>
+        <div><selector name="operation" default="@Model.operation"></selector></div>
+        <div><field name="second" value="@Model.second" /></div>
+    </div>
+    <input type="submit" value="Result" />
+</form>
+
